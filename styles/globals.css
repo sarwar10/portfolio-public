@@ -1,26 +1,63 @@
 @import "tailwindcss";
+body {
+  @apply bg-black text-white;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-bricolage: 'Bricolage Grotesque', sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-bricolage);
+}
+
+
+
+ /* Custom CSS for the glowing effect */
+ .glow-button {
+  position: relative;
+  z-index: 1; /* Ensures text is above the glow */
+  overflow: hidden; /* Hides the part of the pseudo-element outside the button */
+}
+
+.glow-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+      from 0deg,
+      transparent 0%,
+      transparent 20%,
+      #088b4e 25%, /* BlueViolet */
+      #eef12d 30%, /* HotPink */
+      transparent 35%,
+      transparent 100%
+  );
+  /* Adjust the conic-gradient colors and percentages to change the glow effect */
+  transform-origin: center center;
+  animation: rotateGlow 4s linear infinite; /* Animation duration and type */
+  z-index: -1; /* Places the glow behind the button content */
+  border-radius: 0.5rem; /* Matches button's rounded-lg */
+}
+
+.glow-button::after {
+  content: '';
+  position: absolute;
+  inset: 2px; /* Creates a small inner border to define the visible glow */
+  background-color: #3c9b39; /* Dark background to cover the internal glow */
+  border-radius: 0.5rem; /* Matches button's rounded-lg */
+  z-index: -1; /* Ensures this layer is above the glow but behind the text */
+}
+
+/* Keyframes for the rotation animation */
+@keyframes rotateGlow {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
