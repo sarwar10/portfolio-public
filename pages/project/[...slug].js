@@ -22,7 +22,7 @@ const ProjectDetails = ({ slug }) => {
     return (
       <div className="text-center py-20">
         <h1 className="text-4xl font-bold text-white mb-4">404 Error</h1>
-        <p className="text-gray-400">The project you&pos;re looking for doesn&pos;t exist.</p>
+        <p className="text-gray-400">The project you&apos;re looking for doesn&apos;t exist.</p>
       </div>
     );
   }
