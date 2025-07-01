@@ -31,7 +31,7 @@ const Hero = () => {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="text-4xl md:text-6xl font-bold mb-4"
                     >
-                        I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">Sarwar Alam</span>
+                        I&pos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500">Sarwar Alam</span>
                     </motion.h1>
 
                     <motion.h2
@@ -81,7 +81,7 @@ const Hero = () => {
         cursor-pointer
       "
                             >
-                                Let's Connect
+                                Let&pos;s Connect
                             </motion.button>
                         </Link>
                     </motion.div>

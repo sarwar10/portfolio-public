@@ -71,7 +71,7 @@ const ContactForm = () => {
           >
             <h3 className="text-2xl font-bold text-yellow-400 mb-4">Thank You!</h3>
             <p className="text-gray-300">
-              Your message has been sent successfully. I'll get back to you soon.
+              Your message has been sent successfully. I&pos;ll get back to you soon.
             </p>
           </motion.div>
         </div>
