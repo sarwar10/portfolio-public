@@ -127,7 +127,7 @@ const Projects = () => {
                 </div>
                 
                 <Link
-                  href={project.link}
+                  href={`/project/${project.link}`}
                   className="text-yellow-400 hover:text-yellow-300 text-sm font-medium flex items-center transition"
                 >
                   View Project

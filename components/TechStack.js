@@ -19,10 +19,10 @@ const TechStack = () => {
 
 
   return (
-    <section id="tech-stack" className="py-20 md:py-24 bg-gradient-to-r from-black to-green-950 text-white">
+    <section id="tech-stack" className="py-10 md:py-12 bg-gradient-to-r from-black to-green-950 text-white">
       <div className="container mx-auto px-4">
       <motion.h2
-          className="text-3xl md:text-4xl font-bold md:mb-34 mb-24 text-center"
+          className="text-3xl md:text-4xl font-bold mb-34 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -34,11 +34,11 @@ const TechStack = () => {
         <div className="relative w-full h-[60vw] max-h-[300px] md:h-[400px] mx-auto">
           {/* Center display */}
           <div className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${activeTech ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}>
-            <div className="w-[35vw] h-[35vw] max-w-[150px] max-h-[150px] rounded-full bg-gray-900/95 border-4 border-yellow-400 flex flex-col items-center justify-center backdrop-blur-sm p-4 shadow-xl shadow-yellow-400/20">
+            <div className="w-[35vw] h-[35vw] max-w-[200px] max-h-[200px] rounded-full bg-gray-900/95 border-4 border-yellow-400 flex flex-col items-center justify-center backdrop-blur-sm p-4 shadow-xl shadow-yellow-400/20">
               {activeTech ? (
                 <>
-                  <span className="text-3xl font-bold text-yellow-400">
-                    {activeTech.percentage}%
+                  <span className="md:text-2xl text-center font-bold text-yellow-400">
+                    {activeTech.name}
                   </span>
                   <span className="text-sm text-gray-300 mt-1 font-medium">
                     {activeTech.level}

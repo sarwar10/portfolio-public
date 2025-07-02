@@ -53,7 +53,7 @@ const BlogSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Latest <span className="text-yellow-400">Posts</span>
+          Latest <span className="text-yellow-400">Blogs</span>
         </motion.h2>
 
         <motion.div 
@@ -98,7 +98,9 @@ const BlogSection = () => {
                   className="text-xl font-bold mb-2 group-hover:text-yellow-400 group-focus:text-yellow-400 group-active:text-yellow-400 transition"
                   whileHover={{ color: "#facc15" }} // yellow-400
                 >
-                  {post.title}
+                  <Link href={`/blog/${post.link}`}>
+                    {post.title}
+                  </Link>
                 </motion.h3>
                 <motion.p 
                   className="text-gray-400"
@@ -106,7 +108,21 @@ const BlogSection = () => {
                 >
                   {post.excerpt}
                 </motion.p>
+
+                <Link
+                  href={`/blog/${post.link}`}
+                  className="text-yellow-400 hover:text-yellow-300 py-3 text-sm font-medium flex items-center transition"
+                >
+                  View Blog
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </Link>
+
               </div>
+
+              
+
             </motion.div>
           ))}
         </motion.div>

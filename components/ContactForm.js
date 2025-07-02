@@ -51,7 +51,7 @@ const ContactForm = () => {
     return (
       <section 
         id="contact" 
-        className="py-20 bg-gradient-to-r from-black to-green-950"
+        className="py-12 bg-gradient-to-r from-black to-green-950"
         
       >
         <div className="container mx-auto px-6">
@@ -82,7 +82,7 @@ const ContactForm = () => {
   return (
     <section 
       
-      className="py-20 bg-gradient-to-r from-black to-green-950"
+      className="py-12 bg-gradient-to-r from-black to-green-950"
       
     >
       <div className="container mx-auto px-6">
